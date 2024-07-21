@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docter</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            align-items: center;
+            margin-top: 40px;
+            background: #e3f4f955;
+        }
+
+        .Gif img{
+            height: 240px;
+        }
+
+        h2{
+            font-size: 24px;
+        }
+
+        .button{
+            margin-top: 32px;
+        }
+
+        .button button{
+            font-size: 24px;
+            justify-content: space-around;
+            margin-right: 2%;
+            width: 80px;
+            height: 36px;
+            border-radius: 20px;
+            border: none;
+            background: #69c7fd;
+            color: white;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        /* Styling for the dialog box */
+        .dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(70, 142, 238);
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+            text-align: center;
+            backdrop-filter: blur(20px);
+            color: white;
+        }
+
+        .dialog h3 {
+            margin-bottom: 20px;
+        }
+
+        .dialog button {
+            margin-top: 10px;
+            font-size: 24px;
+            background: #ffffff;
+            border: none;
+            width: 56px;
+            height: 28px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Anh mang tình iu đến tặng bé nè !!</h2>
+    <div class="Gif">
+        <img src="peach-goma.gif" alt="">
+    </div>
+    <h2>Bé nhận tình iu anh của anh nha.</h2>
+    <div class="button">
+        <button onclick="Yes()">Yes</button>
+        <button onclick="No()">No</button>
+    </div>
+
+    <!-- Dialog Box -->
+    <div id="dialog" class="dialog">
+        <h3>Hệ thống đang lỗi, Bé Hìn chọn lại giúp anh nhé !!</h3>
+        <button onclick="closeDialog()">OK</button>
+    </div>
+
+    <script>
+        function Yes() {
+            window.location.href = "trang2.html";
+        }
+
+        function No() {
+            // Display the dialog box
+            document.getElementById('dialog').style.display = 'block';
+        }
+
+        function closeDialog() {
+            // Close the dialog box
+            document.getElementById('dialog').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
